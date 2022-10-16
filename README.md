@@ -18,7 +18,7 @@ Python 3.10.6
 
 ```shell
     |--src
-        |--classes
+        |--handlers
 ```
 
 ## Iniciar aplicação
@@ -36,4 +36,7 @@ através de seus métodos:
 
 ```python
     GetData() # retorna todos os dados da API
+    GetWebsites() # retorna todos os websites
+    GetNameEmailCompany() # retorna todos os nomes, emails e empresas
+    GetUserByNameSearch("query") # retorna nomes encontrados que contenham "query"
 ```
