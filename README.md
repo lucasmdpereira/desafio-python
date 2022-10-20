@@ -24,7 +24,7 @@ Python 3.10.6
 ## Iniciar aplicação
 
 ```shell
-    python3 index.py
+    python3 src/index.py
 ```
 
 ## Classes

@@ -2,14 +2,14 @@ import handlers.dataHandler as dataHandler
 
 data = dataHandler.Data()
 
-print(data.GetData())
-print()
+# print(data.entries)
+# print()
 
-print(data.GetWebsites())
-print()
+# print(data.list_websites)
+# print()
 
-print(data.GetNameEmailCompany())
-print()
+# print(data.list_name_email_company)
+# print()
 
-print(data.GetUserByNameSearch('Cle'))
-print()
+# print(data.list_user_by_query('Cle'))
+# print()
