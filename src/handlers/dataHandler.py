@@ -8,18 +8,18 @@ class Data:
         self.users = []
         
     @property 
-    def list_websites(self):
+    def list_users_websites(self):
         for entry in self.entries:
             self.websites.append({entry["website"]})
         return self.websites
     
     @property
-    def list_name_email_company(self):
+    def list_users_name_email_company(self):
         for entry in self.entries:
             self.users.append({"name": entry["name"], "email": entry["email"], "company": entry["company"]["name"]})
         return self.users
     
-    def list_user_by_query(self, incompleteName):
+    def list_users_by_query(self, incompleteName):
         filteredUsers = [entry for entry in (self.entries) if (incompleteName).lower() in (entry['name']).lower()]
 
         for filteredUser in filteredUsers:

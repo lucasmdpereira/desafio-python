@@ -29,14 +29,13 @@ Python 3.10.6
 
 ## Classes
 
-### getDataFromAPI
+### dataHandler.Data
 
 Classe responsável por receber os dados da API e manipular os dados recebidos
 através de seus métodos:
 
 ```python
-    GetData() # retorna todos os dados da API
-    GetWebsites() # retorna todos os websites
-    GetNameEmailCompany() # retorna todos os nomes, emails e empresas
-    GetUserByNameSearch("query") # retorna nomes encontrados que contenham "query"
+    list_users_websites # retorna todos os websites
+    list_users_name_email_company # retorna todos os nomes, emails e empresas
+    list_users_by_query("query") # retorna nomes encontrados que contenham "query"
 ```
