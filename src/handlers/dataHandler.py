@@ -1,7 +1,7 @@
 import json
 import requests
 
-class Data:
+class DataAPI:
     def __init__(self):
         self.entries = json.loads(requests.get("https://jsonplaceholder.typicode.com/users").text)
         self.websites = []
