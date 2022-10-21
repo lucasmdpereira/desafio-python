@@ -2,8 +2,8 @@ import json
 import requests
 
 class DataAPI:
-    def __init__(self):
-        self.entries = json.loads(requests.get("https://jsonplaceholder.typicode.com/users").text)
+    def __init__(self, entries = json.loads(requests.get("https://jsonplaceholder.typicode.com/users").text)):
+        self.entries = entries
         self.websites = {}
         self.users = {}
         
@@ -43,6 +43,9 @@ class DataAPI:
         self.users['users'] = sorted(list_of_users, key=lambda x: x['name'], reverse=False)
         return json.dumps(self.users)
     
+    
+    
+#Usado somente para teste das properties e methods    
 if(__name__ == "__main__"):
     teste = DataAPI()
     print(teste.list_users_by_query('cle'))
