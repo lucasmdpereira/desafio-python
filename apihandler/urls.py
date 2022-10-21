@@ -4,7 +4,7 @@ from apihandler.views import index, websites, detail, users
 
 urlpatterns = [
     path('', index),
-    path('users/websites', websites),
-    path('users/detail', detail),
-    path('users', users),
+    path('users/websites', websites, name='websites'),
+    path('users/detail', detail, name='detail'),
+    path('users', users, name='users'),
 ]

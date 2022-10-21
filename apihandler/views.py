@@ -1,14 +1,33 @@
-from http.client import HTTPResponse
-from django.shortcuts import render
+from django.http.response import HttpResponse
+from django.template import loader
+from src.handlers.dataHandler import DataAPI 
+import json
 
 def index(request):
-    return render(request, 'apihandler/index.html')
+    template = loader.get_template('apihandler/index.html')
+    context = {
+        
+    }
+    return HttpResponse(template.render(context, request))
 
 def websites(request):
-    return render(request, 'apihandler/websites.html')
+    template = loader.get_template('apihandler/websites.html')
+    context = {
+        'websites': DataAPI().list_users_websites,
+    }
+    return HttpResponse(template.render(context, request))
+
 
 def detail(request):
-    return render(request, 'apihandler/detail.html')
+    template = loader.get_template('apihandler/detail.html')
+    context = {
+        'users': DataAPI().list_users_name_email_company,
+    }
+    return HttpResponse(template.render(context, request))
 
 def users(request):
-    return render(request, 'apihandler/users.html')
+    template = loader.get_template('apihandler/detail.html')
+    context = {
+        'users': DataAPI().list_users_by_query('cle'),
+    }
+    return HttpResponse(template.render(context, request))
