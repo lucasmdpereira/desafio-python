@@ -28,7 +28,11 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://desafio-python.azurewebsites.net',
+    'desafio-python.azurewebsites.net',
+    'www.desafio-python.azurewebsites.net'
+]
 
 
 # Application definition
