@@ -13,11 +13,9 @@
 </head>
 <body>
     <h1>Detail</h1>
+    
+    {% include 'apihandler/partials/_navbar.html' %}
+
     <p>{{users}}</p>
-    <ul>
-        <li><a href="{% url 'websites' %}">GET /users/websites</a></li>
-        <li><a href="{% url 'detail' %}">GET /users/detail</a></li>
-        <li><a href="{% url 'users' %}">GET /users?name=cle</a></li>
-    </ul>
 </body>
 </html>
