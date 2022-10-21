@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'https://desafio-python.azurewebsites.net',
     'desafio-python.azurewebsites.net',
-    'www.desafio-python.azurewebsites.net'
+    'www.desafio-python.azurewebsites.net',
 ]
 
 
