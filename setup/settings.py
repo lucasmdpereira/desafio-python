@@ -32,8 +32,8 @@ ALLOWED_HOSTS = [
     'https://desafio-python.azurewebsites.net',
     'desafio-python.azurewebsites.net',
     'www.desafio-python.azurewebsites.net',
+    '127.0.0.1'
 ]
-
 
 # Application definition
 
@@ -135,3 +135,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'

@@ -16,5 +16,6 @@
 
     {% include 'apihandler/partials/_navbar.html' %}
 
+    <p>Você visitou essa página {{ num_visits }}{% if num_visits == 1 %} vez{% else %} vezes{% endif %}.</p>
 </body>
 </html>
