@@ -6,31 +6,28 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
-def index(request):
-    num_visits = request.session.get('num_visits', 1)
-    request.session['num_visits'] = num_visits + 1
-    
-    template = loader.get_template('apihandler/index.html')
+def all_data(request):
+    template = loader.get_template('apihandler/all_data.html')
     context = {
-        'num_visits': num_visits,
+        'data': DataAPI().list_users_by_query("")
     }
     return HttpResponse(template.render(context, request))
 
 @login_required
 def websites(request):
-    # template = loader.get_template('apihandler/websites.html')
+    template = loader.get_template('apihandler/websites.html')
     context = {
         'websites': DataAPI().list_users_websites,
     }
-    return HttpResponse(context['websites'])
+    return HttpResponse(template.render(context, request))
 
 @login_required
 def detail(request):
-    # template = loader.get_template('apihandler/detail.html')
+    template = loader.get_template('apihandler/detail.html')
     context = {
         'users': DataAPI().list_users_name_email_company,
     }
-    return HttpResponse(context['users'])
+    return HttpResponse(template.render(context, request))
 
 @login_required
 def users(request):
