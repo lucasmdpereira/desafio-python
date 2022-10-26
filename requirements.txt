@@ -6,6 +6,7 @@ colorama==0.4.6
 cors==1.0.1
 distlib==0.3.6
 Django==4.1.2
+django-cors-headers==3.13.0
 filelock==3.8.0
 future==0.18.2
 gevent==22.10.1
