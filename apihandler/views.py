@@ -3,15 +3,23 @@ from django.template import loader
 from src.handlers.dataHandler import DataAPI
 from django.contrib.auth.decorators import login_required 
 import json
+from apihandler.forms import search_user_form
 
 
 
 @login_required
 def all_data(request):
     template = loader.get_template('apihandler/all_data.html')
-    context = {
-        'data': DataAPI().entries
-    }
+    query = ''
+    if request.GET.getlist("name"):
+        query = request.GET.getlist("name")[0]  
+        context = {
+            'data': DataAPI().list_users_by_query(query),
+        }
+    else:
+        context = {
+            'data': DataAPI().entries,
+        }
     return HttpResponse(template.render(context, request))
 
 @login_required
@@ -30,16 +38,24 @@ def detail(request):
     }
     return HttpResponse(template.render(context, request))
 
+
+
+
 @login_required
 def users(request):
     # template = loader.get_template('apihandler/detail.html')
-    query = ''
-    if request.GET.getlist("name"):
-        query = request.GET.getlist("name")[0]  
+    if request.method == 'POST':
+        form = search_user_form(request.POST)
+    # query = ''
+    # if request.GET.getlist("name"):
+    #     query = request.GET.getlist("name")[0]  
     context = {
-        'users': DataAPI().list_users_by_query(query),
+        'data': DataAPI().list_users_by_query(form),
     }
-    return HttpResponse(context['users'])
+    return HttpResponse(context['data'])
+
+
+
 
 @login_required
 def raw_data(request):

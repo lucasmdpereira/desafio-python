@@ -4,7 +4,7 @@
 
     --color-principal-100: #282c34;
     --color-neutral-60: #FCFDFF;
-    --width: 56.6rem;
+    --width: 100rem;
 
     font-size: 10px;
 }
@@ -36,7 +36,7 @@ main{
 
 .textarea p{
     color: var(--color-principal-100);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 h1{
@@ -54,8 +54,8 @@ h1{
 
 button, .button{
     width: 20%;
-    min-height: 4.5rem;
-    max-height: 4.5rem;
+    min-height: 4.5rem !important;
+    max-height: 4.5rem !important;
 
     display: flex;
     justify-content: center;
@@ -94,6 +94,7 @@ button, .button{
     line-height: 0;
 }
 
+
 form{
     width: 30%;
     display: flex;
@@ -101,17 +102,20 @@ form{
     flex-direction: row;
 }
 
+
 form .button{
     border-radius:  0 8px 8px 0;
 }
 
 input{
+    width: 100%;
     border-radius:  8px 0 0 8px;
     border: 1.5px solid black;
     font-size: 2rem;
-    height: 4.4rem;
-    width: 11.5rem;
+    height: 4.2rem;
 }
+
+
 
 
 

@@ -21,9 +21,9 @@
         <div class="buttons_container">
             <a class='button' href="{% url 'websites' %}">Websites</a>
             <a class='button' href="{% url 'detail' %}">Users Details</a>
-            <form>
-                <input type="text">
-                <a class='button' href="{% url 'detail' %}">🔍</a>
+            <form class="form_container" action="/">
+                <input id="name" type="text" name="name" />
+                <input class='button' type = "submit" value = "🔍" />
             </form>
         </div>
         {% block content %}{% endblock %}
