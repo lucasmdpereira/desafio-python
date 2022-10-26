@@ -151,4 +151,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
     'https://desafio-python.azurewebsites.net/',
     'https://www.desafio-python.azurewebsites.net/',
+    'https://desafio-python.azurewebsites.net/*',
+    'https://www.desafio-python.azurewebsites.net/*',
+    'http://desafio-python.azurewebsites.net/',
+    'http://www.desafio-python.azurewebsites.net/',
 ]

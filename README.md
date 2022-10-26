@@ -1,10 +1,12 @@
 # Sumário
 
-1. [Objetivo](#objetivo)
-2. [Tecnologias](#tecnologias)
-3. [Estrutura de pastas](#estrutura-de-pastas)
-4. [Iniciar Aplicação](#iniciar-aplicação)
-5. [Classes](#classes)
+- [Sumário](#sumário)
+  - [Objetivo](#objetivo)
+  - [Tecnologias](#tecnologias)
+  - [Estrutura de pastas](#estrutura-de-pastas)
+  - [Iniciar aplicação](#iniciar-aplicação)
+  - [Classes](#classes)
+    - [dataHandler.Data](#datahandlerdata)
 
 ## Objetivo
 
@@ -24,7 +26,8 @@ Python 3.10.6
 ## Iniciar aplicação
 
 ```shell
-    python3 src/index.py
+    pip install -r requirements.txt
+    python manage.py runserver
 ```
 
 ## Classes
