@@ -3,10 +3,9 @@ from django.template import loader
 from src.handlers.dataHandler import DataAPI
 from django.contrib.auth.decorators import login_required 
 import json
-from django.views.decorators.csrf import csrf_exempt
 
 
-@csrf_exempt
+
 @login_required
 def all_data(request):
     template = loader.get_template('apihandler/all_data.html')
@@ -15,7 +14,6 @@ def all_data(request):
     }
     return HttpResponse(template.render(context, request))
 
-@csrf_exempt
 @login_required
 def websites(request):
     template = loader.get_template('apihandler/websites.html')
@@ -24,7 +22,6 @@ def websites(request):
     }
     return HttpResponse(template.render(context, request))
 
-@csrf_exempt
 @login_required
 def detail(request):
     template = loader.get_template('apihandler/detail.html')
@@ -33,7 +30,6 @@ def detail(request):
     }
     return HttpResponse(template.render(context, request))
 
-@csrf_exempt
 @login_required
 def users(request):
     # template = loader.get_template('apihandler/detail.html')
@@ -45,7 +41,6 @@ def users(request):
     }
     return HttpResponse(context['users'])
 
-@csrf_exempt
 @login_required
 def raw_data(request):
     context = {
@@ -53,7 +48,6 @@ def raw_data(request):
     }
     return HttpResponse(context['data'])
 
-@csrf_exempt
 @login_required
 def raw_websites(request):
     context = {
@@ -61,7 +55,6 @@ def raw_websites(request):
     }
     return HttpResponse(context['data'])
 
-@csrf_exempt
 @login_required
 def raw_detail(request):
     context = {
@@ -69,7 +62,6 @@ def raw_detail(request):
     }
     return HttpResponse(context['data'])
 
-@csrf_exempt
 @login_required
 def raw_users(request):
     query = ''
