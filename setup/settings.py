@@ -146,11 +146,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 
-CORS_ALLOW_ALL_ORIGINS
+CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://desafio-python.azurewebsites.net/',
     'https://www.desafio-python.azurewebsites.net/',
-    'www.desafio-python.azurewebsites.net/',
-    'desafio-python.azurewebsites.net/'
 ]
