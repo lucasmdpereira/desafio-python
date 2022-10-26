@@ -6,15 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="{% static '/style/style.css' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static '/assets/favicon.ico' %}"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">   
 
     <title>desafio-python</title>
+    <link rel="shortcut icon" href="{% static 'assets/python.png' %}"/>
 </head>
 <body>
     <main>
@@ -22,7 +21,10 @@
         <div class="buttons_container">
             <a class='button' href="{% url 'websites' %}">Websites</a>
             <a class='button' href="{% url 'detail' %}">Users Details</a>
-            <button>Search</button>
+            <form>
+                <input type="text">
+                <a class='button' href="{% url 'detail' %}">🔍</a>
+            </form>
         </div>
         {% block content %}{% endblock %}
         <div class="logout_container">
